@@ -5,7 +5,7 @@ for j in range(len(word)):
     for i in range(26):
         if chr(i+65) == word[j]:
             spell_count[i] += 1
-            continue
+            break
 
 if spell_count.count(max(spell_count)) >= 2: 
     print("?")
