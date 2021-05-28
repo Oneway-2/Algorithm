@@ -13,4 +13,4 @@ for i in range(1, 10001):
 for i in numbers:
     print(i)
 
-# 내장함수 안쓰면 더 빠르다.
+# 내장함수 안쓰면 더 빠르다...
