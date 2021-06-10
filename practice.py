@@ -1,5 +1,6 @@
-s = '123'
-# print(s[2])
-# s[0] = s[2]
-for i in s:
-    print(i)
+def a():
+    return 3
+def b():
+    return 5
+
+print(a()+b())
