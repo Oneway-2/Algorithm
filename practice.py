@@ -1,4 +1,5 @@
-a, b = 2, 5
-print(a,b )
-a, b = b, a
-print(a,b )
+a = 1
+for i in range(a):
+    print(" "*(a-i-1), "*"*(i+1))
+
+print(" "*0, "fucker")
