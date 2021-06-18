@@ -1,5 +1,3 @@
-a = 1
-for i in range(a):
-    print(" "*(a-i-1), "*"*(i+1))
-
-print(" "*0, "fucker")
+n = int(input())
+nlist = list(map(int, input().split()))
+print(nlist)
