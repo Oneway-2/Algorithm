@@ -10,5 +10,5 @@
 # print(dicts_v)
 # print(dicts_v.index(5))\
 
-nlist = [1,1,1,1,1,2,3,3,3,3,3]
+nlist = [1,1,1,1,1,1,2,3,3,3,3,3]
 print(nlist.index(3,4))
