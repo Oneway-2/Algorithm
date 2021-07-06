@@ -1,14 +1,14 @@
-# dicts = {0:1, 1:1, 2:2, 3:3, 4:4, 5:5, 6:5, 7:6, 8:7, 9:8, 10:9}
-# print(dicts)
-# print(dicts[6])
-# dicts[6] += 1
-# print(dicts[6])
-# dicts_k = list(dicts.keys())
-# dicts_v = list(dicts.values())
+# n = 2
+# a = "abcdef012346"
 
-# print(dicts_k)
-# print(dicts_v)
-# print(dicts_v.index(5))\
+# for i in range(0, n*6, 6):
+#     print("{}".format(i))
+#     print(a[i:i+6])
 
-nlist = [1,1,1,1,1,1,2,3,3,3,3,3]
-print(nlist.index(3,4))
+# print(a[0:6])
+# print(a[6:12])
+
+a = 3
+print(type(3))
+if type(a) == type(1):
+    print("yes")
