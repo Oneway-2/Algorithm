@@ -40,3 +40,5 @@ if flag == False:
     print(order)
 else:
     print("".join(real_text))
+
+# 진짜 겁나 야매로 풀었음.....................................
