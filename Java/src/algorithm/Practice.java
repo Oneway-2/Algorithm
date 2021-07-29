@@ -8,6 +8,6 @@ public class Practice {
 		int[] b = new int[10];
 		System.out.println(Arrays.toString(b));
 		b = Arrays.copyOfRange(a, 2, 4);
-		System.out.println(Arrays.toString(b));
+		System.out.println(Arrays.toString(a));
 	}
 }
