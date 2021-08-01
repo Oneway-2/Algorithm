@@ -1,7 +1,7 @@
 package algorithm;
 import java.io.*;
 import java.util.StringTokenizer;
-public class P20361 {
+public class J20361 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stk = new StringTokenizer(br.readLine());

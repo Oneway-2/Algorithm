@@ -2,7 +2,7 @@ package algorithm;
 import java.io.*;
 import java.util.Arrays;
 
-public class P5212 {
+public class J5212 {
 	static int[] dr = {-1, 1, 0, 0};
 	static int[] dc = { 0, 0,-1, 1};
 //				         상 하 좌 우

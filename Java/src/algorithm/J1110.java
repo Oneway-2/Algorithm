@@ -2,7 +2,7 @@ package algorithm;
 
 import java.io.*;
 
-public class P1110 {
+public class J1110 {
 	public static void main(String[] args) throws IOException{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int x = Integer.parseInt(br.readLine());
