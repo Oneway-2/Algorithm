@@ -7,6 +7,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 /**
+ * 스위치 켜고 끄기
  * 백준 1244번
  * 실버4
  * 84ms
