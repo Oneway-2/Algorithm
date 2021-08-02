@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class L1952 {
 	public static void main(String[] args) throws IOException{
-		Solution s = new Solution();
+		Solution1952 s = new Solution1952();
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());		
@@ -15,7 +15,7 @@ public class L1952 {
 	}
 }
 
-class Solution
+class Solution1952
 {
 	public boolean isThree(int n) {
 		int count = 0;
