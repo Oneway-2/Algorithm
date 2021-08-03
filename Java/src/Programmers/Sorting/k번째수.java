@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 public class k번째수 {
 	public static void main(String[] args) {
-		Solution sol = new Solution();
+		Solution_k번째수 sol = new Solution_k번째수();
 		int[] array = new int[] {1,5,2,6,3,7,4};
 		int[][] commands = new int[][] {{2,5,3}, {4,4,1}, {1,7,3}};
 		int[] answer = new int[commands.length];
@@ -14,7 +14,7 @@ public class k번째수 {
 	}
 }
 
-class Solution {
+class Solution_k번째수 {
 	public int[] solution(int[] array, int[][] commands) {
 		int[] answer= new int[commands.length]; // 명령의 갯수만큼 답이 나올테니 answer 공간 확보
 		for (int i = 0; i < commands.length; i++) {
