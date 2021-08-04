@@ -1,2 +1,5 @@
-# Baekjoon-Algorithm
-Baekjoon Algorithm
+# Algorithm
+Baekjoon
+LeetCode
+Programmers
+SWEA
