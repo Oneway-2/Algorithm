@@ -17,22 +17,14 @@ class Solution_가장큰수 {
 		int[] digit = new int[numbers.length];
 		StringBuilder sb = new StringBuilder();
 		String answer = "";
-		for (int i = 0; i < digit.length; i++) {
-			if (numbers[i] >= 100000) digit[i] = 100000;
-			else if (numbers[i] >= 10000) digit[i] = 10000;
-			else if (numbers[i] >= 1000) digit[i] = 1000;
-			else if (numbers[i] >= 100) digit[i] = 100;
-			else if (numbers[i] >= 10) digit[i] = 10;
-			else if (numbers[i] < 10) digit[i] = 1;
-		}
 		
-		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = numbers[i] / digit[i];
-		}
+		String num1 = Integer.toString(numbers[0]);
+		String num2 = Integer.toString(numbers[1]);
+		System.out.println(num1);
+		System.out.println(num2);
 		
-		System.out.println(Arrays.toString(numbers));
-		
-		
+		int compare = num2.compareTo(num1);
+		System.out.println(compare);
 		
 		
 		
