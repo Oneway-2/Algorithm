@@ -1,4 +1,4 @@
-package Programmers.Sorting;
+package programmers.sorting;
 /** 프로그래머스 코테유형 - 정렬 - K번째수 */
 
 import java.util.Arrays;

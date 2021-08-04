@@ -1,4 +1,4 @@
-package LeetCode;
+package leetCode;
 /** 1952. Three Divisors */
 import java.io.BufferedReader;
 import java.io.IOException;

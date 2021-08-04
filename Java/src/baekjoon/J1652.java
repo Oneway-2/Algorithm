@@ -1,4 +1,4 @@
-package algorithm;
+package baekjoon;
 //누울 자리를 찾아라
 
 import java.io.*;

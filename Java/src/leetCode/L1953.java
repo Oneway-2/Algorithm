@@ -1,4 +1,4 @@
-package LeetCode;
+package leetCode;
 /** 1953. Maximum Number of Weeks for Which You Can Work */
 import java.io.IOException;
 import java.util.ArrayList;

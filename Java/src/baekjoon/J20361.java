@@ -1,4 +1,4 @@
-package algorithm;
+package baekjoon;
 import java.io.*;
 import java.util.StringTokenizer;
 public class J20361 {

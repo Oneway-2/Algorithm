@@ -1,4 +1,4 @@
-package algorithm;
+package baekjoon;
 /**
  * 재귀함수가 뭔가요?
  * 128ms
