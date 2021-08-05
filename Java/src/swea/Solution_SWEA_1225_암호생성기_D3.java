@@ -2,9 +2,9 @@ package swea;
 /**
  * SWEA 1225 암호생성기
  * Difficulty: D3 
- * 실행시간: 144ms / 20초 
- * 메모리: 25,492kb 
- * 코드길이: 1,159
+ * 실행시간: 100ms / 20초 
+ * 메모리: 18,624kb 
+ * 코드길이: 1,593
  * 2021.08.05 목 WS
  */
 
@@ -25,8 +25,24 @@ public class Solution_SWEA_1225_암호생성기_D3 {
 			
 			int TC = Integer.parseInt(br.readLine());
 			StringTokenizer stk = new StringTokenizer(br.readLine(), " ");
+			
+			// 큐에 넣기전에 배열에 잠깐 넣어서 값 축약해주자.
+			int[] arr = new int[8];
+			int min = Integer.MAX_VALUE;
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] = Integer.parseInt(stk.nextToken());
+				if (min > arr[i]) {
+					min = arr[i];
+				}
+			}
+			
+			int v = (min-1) / 15 * 15; // 전체적으로 한방에 빼버릴 값을 넣자. 그런데 몫을 1 뺀 담에 넣어줘야 나눠서 0이 되버리지 않는다.
+			for (int i = 0; i < arr.length; i++) {
+				arr[i] -= v;
+			}
+			
 			for (int i = 0; i < 8; i++) {
-				qnums.offer(Integer.parseInt(stk.nextToken()));
+				qnums.offer(arr[i]);
 			}
 			
 			int temp = 0;
@@ -48,6 +64,7 @@ public class Solution_SWEA_1225_암호생성기_D3 {
 			sb.append("#").append(testCase).append(" ");
 			for (int i = 0; i < 8; i++) {
 				sb.append(qnums.poll()).append(" ");
+//				System.out.printf("%d ", qnums.poll());
 			}
 			sb.append("\n");
 			
@@ -71,4 +88,10 @@ public class Solution_SWEA_1225_암호생성기_D3 {
 
 
 */
+
+/*
+1
+2147483647 2147483640 2147483644 2147483647 2147483647 2147483646 2147483645 2147483644
+을 넣고 돌리면 엄청나게 오래걸린다. 코드 개선이 필요함..
+ */
 
