@@ -9,9 +9,9 @@ import java.util.StringTokenizer;
 /**
  * SWEA 1861 정사각형 방
  * Difficulty: D4 
- * 실행시간: 434ms / 2초 
- * 메모리: 33,564kb 
- * 코드길이: 2,223
+ * 실행시간: 141ms / 2초 
+ * 메모리: 28,852kb 
+ * 코드길이: 2,531
  * 2021.08.06 금 WS
  */
 public class Solution_SWEA_1861_정사각형방_D4 {
@@ -31,8 +31,6 @@ public class Solution_SWEA_1861_정사각형방_D4 {
 					map[i][j] = Integer.parseInt(stk.nextToken());
 				}
 			}
-			
-			//
 			
 			int moveMax = 0;
 			int minRoomNum = N*N;
