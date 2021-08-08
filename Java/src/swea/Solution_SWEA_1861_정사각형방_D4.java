@@ -24,6 +24,7 @@ public class Solution_SWEA_1861_정사각형방_D4 {
 		for (int testCase = 1; testCase <= TC; testCase++) {
 			int N = Integer.parseInt(br.readLine());
 			int[][] map = new int[N+2][N+2];
+			int[][] memo = new int[N+2][N+2];
 			for (int i = 1; i <= N; i++) {
 				StringTokenizer stk = new StringTokenizer(br.readLine()," ");
 				for (int j = 1; j <= N; j++) {
@@ -31,11 +32,20 @@ public class Solution_SWEA_1861_정사각형방_D4 {
 				}
 			}
 			
+			//
+			
 			int moveMax = 0;
 			int minRoomNum = N*N;
 			
 			for (int i = 1; i <= N; i++) {
 				for (int j = 1; j <= N; j++) { // 맵하나씩 다 뒤져보자.
+					
+					if (memo[i][j] == 1) { // memo가 이미 1로 되어있다는건 이미 지나갔었다는 곳이라는거다. 이미 지나간 곳은 살필 필요 없다.
+						continue;
+					}
+					else {
+						memo[i][j] = 1; // memo는 원래 다 0인데 가는데마다 1로 바꿔놓는다.
+					}
 					
 					int ii = i, jj = j;  // 돌아댕길 방 좌표
 					boolean checkedAll = false;
@@ -47,6 +57,7 @@ public class Solution_SWEA_1861_정사각형방_D4 {
 								move++;
 								ii = ii + dr[k];
 								jj = jj + dc[k];
+								memo[ii][jj] = 1;
 								break;
 							}
 							
