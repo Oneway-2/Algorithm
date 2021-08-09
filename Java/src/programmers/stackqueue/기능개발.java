@@ -30,7 +30,7 @@ class Solution_기능개발 {
 					continue;              // 더하지말고 패스해.
 				} 
 				else {							// 만약 아직 100을 넘기지 못했다면
-					progresses[i] += speeds[i]; // 계속해서 더해줘 영차영차
+					progresses[i] += speeds[i]; // 계속해서 더해줘 영차영차~
 					if (progresses[i] > 100) {  // 근데 더했는데 100이 넘어버렸다?
 						progresses[i] = 100;    // 100로 고정시킨다.
 					}
