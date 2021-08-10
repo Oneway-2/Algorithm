@@ -16,7 +16,7 @@ import java.util.StringTokenizer;
  * 2021.08.05 목 HW
  */
 
-public class Main_BOJ_2493_탑_G5 {
+public class Main_백준_2493_탑_G5 {
 	public static void main(String[] args) throws NumberFormatException, IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
