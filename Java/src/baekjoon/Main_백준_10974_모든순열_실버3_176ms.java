@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// 비트마스킹
 public class Main_백준_10974_모든순열_실버3_176ms {
 	static int N;
 	static int[] numbers;
