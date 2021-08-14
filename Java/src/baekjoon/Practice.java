@@ -47,5 +47,6 @@ public class Practice {
 		p = new Child();
 		System.out.println("임마");
 		System.out.println("C");
+		System.out.println("end");
 	}
 }
