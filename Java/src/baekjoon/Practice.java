@@ -1,19 +1,51 @@
 package baekjoon;
 
-import java.util.Arrays;
+
+//class Foo {
+//	private int x;
+//	public Foo(int x) {this.x = x;}
+//	public void setX(int x) {this.x = x;}
+//	public int getX() {return x;}
+//}
+//
+//public class Practice {
+//	static Foo fooBar(Foo foo)
+//	{
+//		foo = new Foo(100);
+//		return foo;
+//	}
+//	
+//	public static void main(String[] args) {
+//		Foo foo = new Foo(300);
+//		System.out.print(foo.getX() + "-");
+//		Foo fooFoo = fooBar(foo);
+//		System.out.print(foo.getX() + "-");
+//		System.out.print(fooFoo.getX() + "-");
+//		
+//		foo = fooBar(fooFoo);
+//		System.out.print(foo.getX() + "-");
+//		System.out.print(fooFoo.getX());
+//		
+//	}
+//}
+
+class Parent {
+	public Parent() {
+		System.out.println("A");
+	}
+}
+class Child extends Parent {
+	public Child() {
+		System.out.println("B");
+	}
+}
 
 public class Practice {
 	public static void main(String[] args) {
-		long n = 0;
-		long acc = 2*n*(n+1)*(2*n + 1);
-		double awer = Math.pow(10, 15);
-		System.out.println(awer);
-		while(acc < Math.pow(10, 15)) {
-			n++;
-			acc = 2*n*(n+1)*(2*n + 1);
-			System.out.printf("n = %d, acc = %d\n", n , acc);
-		}
-		
-		//10의 15승까지 가기위한 단계는 62996번
+		Parent p;
+		System.out.println("뭐");
+		p = new Child();
+		System.out.println("임마");
+		System.out.println("C");
 	}
 }
