@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_백준_1759_암호만들기_골드5_ms {
+public class Main_백준_1759_암호만들기_골드5_80ms {
 	
 	private static String[] alpa;
 	private static String[] possible;
