@@ -31,5 +31,5 @@ public class Solution_SWEA_2005_파스칼의삼각형_D2_101ms {
 			}
 		} // 테케 끝
 		System.out.println(sb);
-	} // 메인 끝
+	} // 메인 끝 d
 }
