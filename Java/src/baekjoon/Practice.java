@@ -1,52 +1,76 @@
 package baekjoon;
 
-
-//class Foo {
-//	private int x;
-//	public Foo(int x) {this.x = x;}
-//	public void setX(int x) {this.x = x;}
-//	public int getX() {return x;}
-//}
-//
-//public class Practice {
-//	static Foo fooBar(Foo foo)
-//	{
-//		foo = new Foo(100);
-//		return foo;
-//	}
-//	
-//	public static void main(String[] args) {
-//		Foo foo = new Foo(300);
-//		System.out.print(foo.getX() + "-");
-//		Foo fooFoo = fooBar(foo);
-//		System.out.print(foo.getX() + "-");
-//		System.out.print(fooFoo.getX() + "-");
-//		
-//		foo = fooBar(fooFoo);
-//		System.out.print(foo.getX() + "-");
-//		System.out.print(fooFoo.getX());
-//		
-//	}
-//}
-
-class Parent {
-	public Parent() {
-		System.out.println("A");
-	}
-}
-class Child extends Parent {
-	public Child() {
-		System.out.println("B");
-	}
-}
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Arrays;
+import java.util.StringTokenizer;
 
 public class Practice {
-	public static void main(String[] args) {
-		Parent p;
-		System.out.println("뭐");
-		p = new Child();
-		System.out.println("임마");
-		System.out.println("C");
-		System.out.println("stopError");
+	static int N;
+	static int R;
+	static int[] numbers;
+	static int[] input;
+
+	public static void main(String[] args) throws IOException {
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringTokenizer stk = new StringTokenizer(br.readLine(), " ");
+		N = Integer.parseInt(stk.nextToken());
+		R = Integer.parseInt(stk.nextToken());
+		input = new int[N];
+		numbers = new int[R];
+
+		stk = new StringTokenizer(br.readLine(), " ");
+		for (int i = 0; i < input.length; i++) {
+			input[i] = Integer.parseInt(stk.nextToken());
+		}
+
+		Permu(0, 0);
+		System.out.println();
+		Combi(0, 0);
+		System.out.println();
+
+		dPermu(0);
+	}
+
+	private static void Combi(int cnt, int start) {
+		if (cnt == R) {
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+
+		for (int i = start; i < N; i++) {
+			numbers[cnt] = input[i];
+			Combi(cnt + 1, i);
+		}
+	}
+
+	private static void Permu(int cnt, int flag) {
+		if (cnt == R) {
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+
+		for (int i = 0; i < N; i++) {
+			if ((flag & 1 << i) != 0) {
+				continue;
+			}
+			numbers[cnt] = input[i];
+			Permu(cnt + 1, flag | 1 << i);
+		}
+
+	}
+
+	private static void dPermu(int cnt) {
+		if (cnt == R) {
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+		for (int i = 0; i < N; i++) {
+			numbers[cnt] = input[i];
+			dPermu(cnt + 1);
+
+		}
+
 	}
 }
