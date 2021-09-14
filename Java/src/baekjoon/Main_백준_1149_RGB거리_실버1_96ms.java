@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class Main_백준_1149_RGB거리_실버1_김한길_96ms {
+public class Main_백준_1149_RGB거리_실버1_96ms {
 	static int R = 0;
 	static int G = 1;
 	static int B = 2;

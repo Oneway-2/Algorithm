@@ -4,7 +4,7 @@ package baekjoon;
  */
 import java.util.Scanner;
 
-public class Main_백준_1463_1로만들기_실버3_김한길_136ms {
+public class Main_백준_1463_1로만들기_실버3_136ms {
 	static int[] D;
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
