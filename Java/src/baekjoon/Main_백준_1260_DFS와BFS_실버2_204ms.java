@@ -41,17 +41,17 @@ public class Main_백준_1260_DFS와BFS_실버2_204ms {
 		sb.append(v).append(" ");
 		for (int i = 1; i <= N; i++) {
 			if (map[v][i] == 1 && !visited[i]) {
+				visited[i] = true;
 				dfs(i);
 			}
 		}
-	} // dfs 끝
+	} 
 	
 	private static void bfs(int v) {
 		Queue<Integer> q = new LinkedList<Integer>();
 		q.offer(v);
 		visited[v] = true;
 		sb.append(v).append(" ");
-		
 		while(q.size() > 0) {
 			int cur = q.poll();
 			for (int i = 1; i <= N; i++) {
@@ -62,5 +62,5 @@ public class Main_백준_1260_DFS와BFS_실버2_204ms {
 				}
 			}
 		}
-	} // bfs 끝
+	}
 }
