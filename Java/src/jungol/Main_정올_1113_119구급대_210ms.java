@@ -7,14 +7,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-/**
- * 2021.10.01 금 WS
- */
-
-public class Main_정올_1113_119구급대_ms {
+public class Main_정올_1113_119구급대_210ms {
 	public static void main(String[] args) throws IOException {
-//		int[] dr = {-1,1,0,0};
-//		int[] dc = {0,0,-1,1}; // 상하좌우
 		int[] dr = {-1,0,1,0};
 		int[] dc = {0,1,0,-1}; // 상우하좌
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -25,13 +19,13 @@ public class Main_정올_1113_119구급대_ms {
 		int desM = Integer.parseInt(stk.nextToken());
 		int desN = Integer.parseInt(stk.nextToken());
 		int minCnt = Integer.MAX_VALUE;
-		boolean[][] map = new boolean[M][N];
+		int[][] map = new int[M][N];
 		boolean[][] visited = new boolean[M][N];
 		
 		for (int i = 0; i < M; i++) {
 			stk = new StringTokenizer(br.readLine(), " ");
 			for (int j = 0; j < N; j++) {
-				if(Integer.parseInt(stk.nextToken()) == 1) map[i][j] = true;
+				map[i][j] = Integer.parseInt(stk.nextToken());
 			}
 		}
 		
@@ -44,29 +38,28 @@ public class Main_정올_1113_119구급대_ms {
 			int c = q.peek()[1];
 			int dir = q.peek()[2];
 			int cnt = q.poll()[3];
+			visited[r][c] = true;
+			
 			if(r == desM && c == desN) {
 				if(minCnt > cnt) minCnt = cnt;
-				visited[r][c] = false;
 				continue;
 			}
 			
 			for (int i = 0; i < 4; i++) {
 				int nr = r + dr[i];
 				int nc = c + dc[i];
-				if(0<=nr && nr<M && 0<=nc && nc<N && map[nr][nc] && !visited[nr][nc]) {
-					if (dir != i) {
-						q.offer(new int[] {nr, nc, i, cnt+1});
-						visited[nr][nc] = true;
-					}
-					else {
+				if(0<=nr && nr<M && 0<=nc && nc<N && map[nr][nc] != 0 && !visited[nr][nc]) {
+					map[r][c] = cnt;
+					if (dir == i) {
 						q.offer(new int[] {nr, nc, i, cnt});
-						visited[nr][nc] = true;
+					}
+					else if(cnt + 1 < minCnt) {
+						q.offer(new int[] {nr, nc, i, cnt + 1});
 					}
 				}
 			}
 		} // while 긑
 		System.out.println(minCnt);
-		
 	} // 메인 끝
 }
 
