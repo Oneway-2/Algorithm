@@ -24,7 +24,6 @@ public class Main_백준_2239_스도쿠_골드4_600ms {
 			setSudoku(r+1, 0);
 			return;
 		}
-
 		if (r == 9) {
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < map.length; i++) {
