@@ -43,7 +43,7 @@ public class Practice {
 	public static void main(String[] args) {
 		// d이거실행어케하더라 cn
 		// Set이 먼지암?대충암 ㅜ 중복허용 된다 안디ㅗㄴ다??안됨
-		HashSet<Pair> st = new HashSet<>();s
+		HashSet<Pair> st = new HashSet<>();
 		st.add(new Pair(0, 1));
 		st.add(new Pair(0, 1));
 		System.out.println(st.size()); // 그럼 이거 결과 몇개임1?ㄷㄷ new라서그런가
