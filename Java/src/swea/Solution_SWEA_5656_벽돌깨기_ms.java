@@ -55,7 +55,7 @@ public class Solution_SWEA_5656_벽돌깨기_ms {
 			}
 			return;
 		}
-		
+		 
 		for (int i = start; i <= W-1; i++) {
 			ball[cnt] = i;
 			comb(cnt+1, i);
@@ -72,7 +72,7 @@ public class Solution_SWEA_5656_벽돌깨기_ms {
 	}
 
 	private static void boom(int r, int c) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
