@@ -1,74 +1,102 @@
 package baekjoon;
 
-import java.util.HashSet;
-import java.util.Iterator;
-
+import java.util.Arrays;
+import java.util.Scanner;
 public class Practice {
-	
-	static class Pair{
-		int x;
-		int y;
-		public Pair() {	}
-		public Pair(int x, int y) {
-			this.x = x;
-			this.y = y;
-		}
-		// 보통 ide가 만들어주는거 걍 쓰면댐
-		@Override
-		public int hashCode() {
-			final int prime = 31;
-			int result = 1;
-			result = prime * result + x;
-			result = prime * result + y;
-			return result;
-		}
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			Pair other = (Pair) obj;
-			if (x != other.x)
-				return false;
-			if (y != other.y)
-				return false;
-			return true;
-		}
+
+	static int N, numbers[], totalCnt;
+	static boolean[] isSelected;
+
+	public static void main(String[] args) {
+
+		// 첫번째 입력: 6 개중 몇 개 골라낼거야?
+		// 두 번쨰 입력: 1. 중복순열 2.순열 3.중복조합 4.조합
 		
+		Scanner sc = new Scanner(System.in);
+		N = sc.nextInt();
+		numbers = new int[N];
+		int M = sc.nextInt();
+
+		switch (M) {
+		case 1: // 주사위 던지기1: 중복순열
+			dice1(0);
+			break;
+
+		case 2: // 주사위 던지기2: 순열
+			isSelected = new boolean[7];
+			dice2(0);
+			break;
+
+		case 3: // 주사위 던지기3: 중복조합
+			dice3(0, 1);
+			break;
+
+		case 4: // 주사위 던지기4: 조합
+			dice4(0, 1);
+			break;
+
+		}
+		System.out.println("경우의 수는 " + totalCnt);
+	}
+
+	private static void dice1(int cnt) {
+		// 중복순열 
+		if (cnt == N) {
+			totalCnt++;
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+		for (int i = 1; i <= 6; i++) {
+			numbers[cnt] = i;
+			dice1(cnt + 1);
+		}
+	}
+
+	private static void dice2(int cnt) {
+		// 순열
+		if (cnt == N) {
+			totalCnt++;
+			System.out.println(Arrays.toString(numbers));
+			return;
+		}
+		for (int i = 1; i <= 6; i++) {
+			// 중복체크
+			if (isSelected[i]) {
+				continue;
+			}
+			numbers[cnt] = i;
+			isSelected[i] = true;
+
+			dice2(cnt + 1);
+			isSelected[i] = false;
+		}
 	}
 	
-	public static void main(String[] args) {
-		// d이거실행어케하더라 cn
-		// Set이 먼지암?대충암 ㅜ 중복허용 된다 안디ㅗㄴ다??안됨
-		HashSet<Pair> st = new HashSet<>();
-		st.add(new Pair(0, 1));
-		st.add(new Pair(0, 1));
-		System.out.println(st.size()); // 그럼 이거 결과 몇개임1?ㄷㄷ new라서그런가
-		// Set이나 Map은 이미 있는 키 인지 판별할떄 안에 있는 이 객체 안에 있는 값 보는게 아니라
-		// 레퍼런스만 판별함 저거 객체 생성된 주소 그런거
-		// 그래서 동일한 객체인지 판별하려면 해시코드 메소드랑, equals 메소드 ㄷ오버라이딩 해줘야
-		// 그거로 동일한 객체인지 판별함
-		System.out.println(st.contains(new Pair(0, 1)));
-		System.out.println(st.size()); 
-		// 오 지린다 이제알것누? 저거  Pair x,y 들어있으면 visit true인걸로 보면댐 ㄹㅇ이네[
-		// 그럼 문제해결인데 ㄹㅇ천재여? 씹련아??ㄷㄷ지리누
-//		System.out.println(st.hashCode());
+	private static void dice3(int cnt, int start) {
+		// 중복조합
+		if (cnt==N) {
+			System.out.println(Arrays.toString(numbers));
+			totalCnt++;
+			return;
+		} 
 		
-//		Iterator<Pair> it = st.iterator();
-////		while(it.hasNext()) {
-////			Pair a = it.next
-////			System.out.println(a.x + " " + a.y);
-////		}
-//		
-//		Pair a = it.next();
-//		System.out.println(a.x + " " + a.y);
-//		a = it.next();
-//		System.out.println(a.x + " " + a.y);
-//		a = it.next();
-//		System.out.println(a.x + " " + a.y);
+		for (int i = start; i <= 6; i++) {
+			numbers[cnt] = i;
+			dice3(cnt + 1, i); // 현재 선택한 수부터 처리하도록
+		}
+	}
+
+	private static void dice4(int cnt, int start) {
+		// 조합
+		if (cnt==N) {
+			System.out.println(Arrays.toString(numbers));
+			totalCnt++;
+			return;
+		} 
 		
-	}	
+		for (int i = start; i <= 6; i++) {
+			numbers[cnt] = i;
+			dice4(cnt + 1, i + 1);
+		}
+	}
 }
