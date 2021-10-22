@@ -20,7 +20,7 @@ public class Main_백준_15650_N과M2_실버3_88ms {
 	} // 메인 끝
 
 	private static void per(int cnt, int start) {
-		// 순열
+		// 조합
 		if (cnt == M) {
 			for (int i = 0; i < numbers.length; i++) {
 				sb.append(numbers[i]).append(" ");
