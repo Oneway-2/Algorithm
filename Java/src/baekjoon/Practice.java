@@ -1,102 +1,63 @@
 package baekjoon;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.HashSet;
+import java.util.StringTokenizer;
+
 public class Practice {
-
-	static int N, numbers[], totalCnt;
-	static boolean[] isSelected;
-
-	public static void main(String[] args) {
-
-		// 첫번째 입력: 6 개중 몇 개 골라낼거야?
-		// 두 번쨰 입력: 1. 중복순열 2.순열 3.중복조합 4.조합
+	
+	static class Pair {
+		int x;
+		int y;
+		public Pair() {
+			// TODO Auto-generated constructor stub
+		}
+		public Pair(int x, int y) {
+			this.x = x;
+			this.y = y;
+		}
 		
-		Scanner sc = new Scanner(System.in);
-		N = sc.nextInt();
-		numbers = new int[N];
-		int M = sc.nextInt();
-
-		switch (M) {
-		case 1: // 주사위 던지기1: 중복순열
-			dice1(0);
-			break;
-
-		case 2: // 주사위 던지기2: 순열
-			isSelected = new boolean[7];
-			dice2(0);
-			break;
-
-		case 3: // 주사위 던지기3: 중복조합
-			dice3(0, 1);
-			break;
-
-		case 4: // 주사위 던지기4: 조합
-			dice4(0, 1);
-			break;
-
+		@Override
+		public int hashCode() {
+			final int prime = 31;
+			int result = 1;
+			result = prime * result + x;
+			result = prime * result + y;
+			return result;
 		}
-		System.out.println("경우의 수는 " + totalCnt);
-	}
-
-	private static void dice1(int cnt) {
-		// 중복순열 
-		if (cnt == N) {
-			totalCnt++;
-			System.out.println(Arrays.toString(numbers));
-			return;
+		@Override
+		public boolean equals(Object obj) {
+			if (this == obj)
+				return true;
+			if (obj == null)
+				return false;
+			if (getClass() != obj.getClass())
+				return false;
+			Pair other = (Pair) obj;
+			if (x != other.x)
+				return false;
+			if (y != other.y)
+				return false;
+			return true;
 		}
-		for (int i = 1; i <= 6; i++) {
-			numbers[cnt] = i;
-			dice1(cnt + 1);
-		}
-	}
-
-	private static void dice2(int cnt) {
-		// 순열
-		if (cnt == N) {
-			totalCnt++;
-			System.out.println(Arrays.toString(numbers));
-			return;
-		}
-		for (int i = 1; i <= 6; i++) {
-			// 중복체크
-			if (isSelected[i]) {
-				continue;
-			}
-			numbers[cnt] = i;
-			isSelected[i] = true;
-
-			dice2(cnt + 1);
-			isSelected[i] = false;
+		@Override
+		public String toString() {
+			return x + " " + y;
 		}
 	}
 	
-	private static void dice3(int cnt, int start) {
-		// 중복조합
-		if (cnt==N) {
-			System.out.println(Arrays.toString(numbers));
-			totalCnt++;
-			return;
-		} 
-		
-		for (int i = start; i <= 6; i++) {
-			numbers[cnt] = i;
-			dice3(cnt + 1, i); // 현재 선택한 수부터 처리하도록
-		}
+	public static void main(String[] args) throws IOException {
+		HashSet<Pair> h = new HashSet<Pair>();
+		h.add(new Pair(0, 1));
+		h.add(new Pair(0, 0));
+		System.out.println(h.size());
+		System.out.println(h.toString());
+		System.out.println(h.contains(new Pair(0, 0)));
+		System.out.println(h.contains(new Pair(1, 0)));
 	}
-
-	private static void dice4(int cnt, int start) {
-		// 조합
-		if (cnt==N) {
-			System.out.println(Arrays.toString(numbers));
-			totalCnt++;
-			return;
-		} 
 		
-		for (int i = start; i <= 6; i++) {
-			numbers[cnt] = i;
-			dice4(cnt + 1, i + 1);
-		}
-	}
 }
+
