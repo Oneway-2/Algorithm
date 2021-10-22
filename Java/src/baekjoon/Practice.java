@@ -10,22 +10,19 @@ import java.util.StringTokenizer;
 public class Practice {
 	
 	static class Pair {
-		int x;
-		int y;
+		int[] x;
 		public Pair() {
 			// TODO Auto-generated constructor stub
 		}
-		public Pair(int x, int y) {
+		public Pair(int[] x) {
+			super();
 			this.x = x;
-			this.y = y;
 		}
-		
 		@Override
 		public int hashCode() {
 			final int prime = 31;
 			int result = 1;
-			result = prime * result + x;
-			result = prime * result + y;
+			result = prime * result + Arrays.hashCode(x);
 			return result;
 		}
 		@Override
@@ -37,26 +34,27 @@ public class Practice {
 			if (getClass() != obj.getClass())
 				return false;
 			Pair other = (Pair) obj;
-			if (x != other.x)
-				return false;
-			if (y != other.y)
+			if (!Arrays.equals(x, other.x))
 				return false;
 			return true;
 		}
 		@Override
 		public String toString() {
-			return x + " " + y;
+			return "Pair [x=" + Arrays.toString(x) + "]";
 		}
+		
 	}
 	
 	public static void main(String[] args) throws IOException {
 		HashSet<Pair> h = new HashSet<Pair>();
-		h.add(new Pair(0, 1));
-		h.add(new Pair(0, 0));
+		int[] x = new int[] {0,0,0,0};
+		h.add(new Pair(x));
+//		h.add(new Pair(new int[] {0,0,0,0}));
+		h.add(new Pair(new int[] {1,1,1,1}));
 		System.out.println(h.size());
 		System.out.println(h.toString());
-		System.out.println(h.contains(new Pair(0, 0)));
-		System.out.println(h.contains(new Pair(1, 0)));
+		System.out.println(h.contains(new Pair(new int[] {1,0})));
+		System.out.println(h.contains(new Pair(new int[] {1,1,1,1})));
 	}
 		
 }
