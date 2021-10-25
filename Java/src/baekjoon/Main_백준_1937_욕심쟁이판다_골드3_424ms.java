@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class Main_백준_1937_욕심쟁이판다_골드3_424ms {
 	private static int[] dr = {-1,1,0,0};
 	private static int[] dc = {0,0,-1,1}; // 상하좌우
-	private static int map[][], memo[][], val, maxVal=0;
+	private static int map[][], memo[][], maxVal=0;
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stk;
