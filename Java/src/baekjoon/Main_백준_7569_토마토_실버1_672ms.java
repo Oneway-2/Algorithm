@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-public class Main_백준_7569_토마토_실버1_712ms {
+public class Main_백준_7569_토마토_실버1_672ms {
 	public static void main(String[] args) throws IOException {
 		int[] dr = {-1,1,0,0,0,0}; // 상하좌우 위 아래
 		int[] dc = {0,0,-1,1,0,0};
@@ -19,7 +19,6 @@ public class Main_백준_7569_토마토_실버1_712ms {
 		int H = Integer.parseInt(stk.nextToken()); // 높이
 		int maxDay = Integer.MIN_VALUE;
 		int[][][] map = new int[H][R][C];
-		boolean[][][] visited = new boolean[H][R][C];
 		Queue<int[]> q = new LinkedList<int[]>();
 		for (int i = 0; i < H; i++) {
 			for (int j = 0; j < R; j++) {
@@ -28,7 +27,6 @@ public class Main_백준_7569_토마토_실버1_712ms {
 					map[i][j][k] = Integer.parseInt(stk.nextToken());
 					if(map[i][j][k] == 1) {
 						q.offer(new int[] {i, j, k, 0}); // h, r, c, day
-						visited[i][j][k] = true;
 					}
 				}
 			}
@@ -45,11 +43,10 @@ public class Main_백준_7569_토마토_실버1_712ms {
 				int nh = h + dh[i];
 				int nr = r + dr[i];
 				int nc = c + dc[i];
-				if (0>nh || nh>=H || 0>nr || nr>=R || 0>nc || nc>=C || visited[nh][nr][nc] || map[nh][nr][nc] != 0) {
+				if (0>nh || nh>=H || 0>nr || nr>=R || 0>nc || nc>=C || map[nh][nr][nc] != 0) {
 					continue;
 				}
 				q.offer(new int[] {nh, nr, nc, day+1});
-				visited[nh][nr][nc] = true;
 				map[nh][nr][nc] = 1;
 			}
 		}
