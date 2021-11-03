@@ -8,54 +8,27 @@ import java.util.HashSet;
 import java.util.StringTokenizer;
 
 public class Practice {
-	
-	static class Pair {
-		int[] x;
-		public Pair() {
-			// TODO Auto-generated constructor stub
+	public static void main(String[] args) {
+		int[][][] map = new int[3][2][5];
+		
+		System.out.println(map.length);
+		System.out.println(map[0].length);
+		System.out.println(map[0][0].length);
+		
+		for (int i = 0; i < map.length; i++) {
+			for (int j = 0; j < map[i].length; j++) {
+				for (int k= 0; k < map[i][j].length; k++) {
+					System.out.print(map[i][j][k] + " ");
+				}
+				System.out.println();
+			}
+			System.out.println();
 		}
-		public Pair(int[] x) {
-			super();
-			this.x = x;
-		}
-		@Override
-		public int hashCode() {
-			final int prime = 31;
-			int result = 1;
-			result = prime * result + Arrays.hashCode(x);
-			return result;
-		}
-		@Override
-		public boolean equals(Object obj) {
-			if (this == obj)
-				return true;
-			if (obj == null)
-				return false;
-			if (getClass() != obj.getClass())
-				return false;
-			Pair other = (Pair) obj;
-			if (!Arrays.equals(x, other.x))
-				return false;
-			return true;
-		}
-		@Override
-		public String toString() {
-			return "Pair [x=" + Arrays.toString(x) + "]";
-		}
+		
 		
 	}
 	
-	public static void main(String[] args) throws IOException {
-		HashSet<Pair> h = new HashSet<Pair>();
-		int[] x = new int[] {0,0,0,0};
-		h.add(new Pair(x));
-//		h.add(new Pair(new int[] {0,0,0,0}));
-		h.add(new Pair(new int[] {1,1,1,1}));
-		System.out.println(h.size());
-		System.out.println(h.toString());
-		System.out.println(h.contains(new Pair(new int[] {1,0})));
-		System.out.println(h.contains(new Pair(new int[] {1,1,1,1})));
-	}
+
 		
 }
 
