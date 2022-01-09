@@ -1,2 +1,4 @@
-nlist = [2,3,4,4,1,1,2,4]
-print(nlist.index(max(nlist))+1)
+a = 5
+b = 10
+a = max(a, b)
+print(a)
