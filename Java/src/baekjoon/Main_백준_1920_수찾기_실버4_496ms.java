@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_백준_1920_수찾기_실버4_ms {
+public class Main_백준_1920_수찾기_실버4_496ms {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
@@ -22,38 +22,31 @@ public class Main_백준_1920_수찾기_실버4_ms {
 		for (int i = 0; i < M; i++) {
 			find[i] = Integer.parseInt(stk.nextToken());
 		}
-		
+
 		// arr 정렬
 		Arrays.sort(arr);
 		for (int i = 0; i < M; i++) {
-			int t = find[i];
-			int idx = (N-1)/2;
-			int pm = idx/2;
+			int key = find[i];
+			int start = 0;
+			int end = N - 1;
+			int mid;
 			boolean flag = false;
-			while(true) {
-				if (t > arr[idx]) {
-					idx += pm;
-				}
-				else {
-					idx -= pm;
-				}
-				if (t == arr[idx]) {
+			while (end - start >= 0) {
+				mid = (start + end) / 2;
+				if (arr[mid] == key) {
 					sb.append(1).append("\n");
+					flag = true;
 					break;
-				}
-				else {
-					pm /= 2;
-					if (pm < 2 && !flag) {
-						pm = 1;
-						flag = true;
-					}
-					else if (pm < 2 && flag){
-						sb.append(0).append("\n");
-						break;
-					}
+				} else if (arr[mid] > key) {
+					end = mid - 1;
+				} else {
+					start = mid + 1;
 				}
 			}
-		} // for 끝
+			if (!flag) {
+				sb.append(0).append("\n");
+			}
+		}
 		System.out.println(sb);
 	} // 메인 끝
 }
