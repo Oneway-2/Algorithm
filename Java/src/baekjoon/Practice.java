@@ -51,7 +51,7 @@ public class Practice {
 //		System.out.println("go");
 //		perm(0, selected, numbers);
 		
-		String s = "ma";
+		String s = "maa";
 		String k = "sk";
 		String sk = s.concat(k);
 		System.out.println(sk);
