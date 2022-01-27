@@ -58,6 +58,28 @@ public class Practice {
 		String m ="turn"; 
 		System.out.println("account test");
 		
+		int[][] arr = {{1,2,3,4,5}, {6,7,8,9,0}};
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(Arrays.toString(arr[i]));
+		}
+		for (int i = 0; i < arr.length; i++) {
+			Arrays.fill(arr[i], 5);
+		}
+		for (int i = 0; i < arr.length; i++) {
+			System.out.println(Arrays.toString(arr[i]));
+		}
+		
+		LinkedList<Integer> asdf = new LinkedList<>();
+		asdf.add(5);
+		asdf.add(8);
+		for (int i = 0; i < asdf.size(); i++) {
+			System.out.println(asdf.get(i));
+		}
+		asdf.clear();
+		for (int i = 0; i < asdf.size(); i++) {
+			System.out.println(asdf.get(i));
+		}
+		
 		
 	}
 
