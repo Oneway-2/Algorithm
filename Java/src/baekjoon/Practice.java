@@ -1,17 +1,13 @@
 package baekjoon;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
+import java.util.Scanner;
 
 public class Practice {
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int s = sc.nextInt();
+		int n = s - 543;
+		System.out.println(n);
 //		String hex = "1F7";
 //		int deci = 503;
 //		System.out.println(Integer.toHexString(deci));
@@ -51,34 +47,48 @@ public class Practice {
 //		System.out.println("go");
 //		perm(0, selected, numbers);
 		
-		String s = "maa";
-		String k = "sk";
-		String sk = s.concat(k);
-		System.out.println(sk);
-		String m ="turn"; 
-		System.out.println("account test");
+//		String s = "maa";
+//		String k = "sk";
+//		String sk = s.concat(k);
+//		System.out.println(sk);
+//		String m ="turn"; 
+//		System.out.println("account test");
+//		
+//		int[][] arr = {{1,2,3,4,5}, {6,7,8,9,0}};
+//		for (int i = 0; i < arr.length; i++) {
+//			System.out.println(Arrays.toString(arr[i]));
+//		}
+//		for (int i = 0; i < arr.length; i++) {
+//			Arrays.fill(arr[i], 5);
+//		}
+//		for (int i = 0; i < arr.length; i++) {
+//			System.out.println(Arrays.toString(arr[i]));
+//		}
+//		
+//		LinkedList<Integer> asdf = new LinkedList<>();
+//		asdf.add(5);
+//		asdf.add(8);
+//		for (int i = 0; i < asdf.size(); i++) {
+//			System.out.println(asdf.get(i));
+//		}
+//		asdf.clear();
+//		for (int i = 0; i < asdf.size(); i++) {
+//			System.out.println(asdf.get(i));
+//		}
+//		
+//		String fdfd = "";
+//		String dfdf = "";
+//		String zzz = "0";
+//		System.out.println(Integer.parseInt(zzz));
+//		int four = 4;
+//		int five = 5;
+//		int six = 6;
+//		fdfd = fdfd.concat(Integer.toString(four));
+//		fdfd = fdfd.concat(Integer.toString(five)); // 45
+//		dfdf = dfdf.concat(Integer.toString(six));
+//		dfdf = dfdf.concat(Integer.toString(four)); // 64 합하면 109
+//		System.out.println(Integer.parseInt(fdfd) + Integer.parseInt(dfdf));
 		
-		int[][] arr = {{1,2,3,4,5}, {6,7,8,9,0}};
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(Arrays.toString(arr[i]));
-		}
-		for (int i = 0; i < arr.length; i++) {
-			Arrays.fill(arr[i], 5);
-		}
-		for (int i = 0; i < arr.length; i++) {
-			System.out.println(Arrays.toString(arr[i]));
-		}
-		
-		LinkedList<Integer> asdf = new LinkedList<>();
-		asdf.add(5);
-		asdf.add(8);
-		for (int i = 0; i < asdf.size(); i++) {
-			System.out.println(asdf.get(i));
-		}
-		asdf.clear();
-		for (int i = 0; i < asdf.size(); i++) {
-			System.out.println(asdf.get(i));
-		}
 		
 		
 	}
