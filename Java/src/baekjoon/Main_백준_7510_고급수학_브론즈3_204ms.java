@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class Main_백준_7510_고급수학_브론즈3_ms {
+public class Main_백준_7510_고급수학_브론즈3_204ms {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringTokenizer stk;
@@ -25,6 +25,7 @@ public class Main_백준_7510_고급수학_브론즈3_ms {
 			else {
 				System.out.println("no");
 			}
+			System.out.println();
 		}
 	} // 메인 끝
 }
