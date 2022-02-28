@@ -8,7 +8,7 @@ public class Practice {
 		int s = sc.nextInt();
 		int n = s - 543;
 		System.out.println(n);
-//		String hex = "1F7";
+		String hex = "1F7";
 //		int deci = 503;
 //		System.out.println(Integer.toHexString(deci));
 //		System.out.println(Integer.parseInt(hex, 16));
