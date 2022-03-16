@@ -50,6 +50,7 @@ public class Main_백준_4963_섬의개수_실버2_188ms {
 					}
 				}
 			}
+			
 			sb.append(cnt).append("\n");
 		} // while 끝
 		System.out.println(sb);
