@@ -1,17 +1,43 @@
 package baekjoon;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class Practice {
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int s = sc.nextInt();
-		int n = s - 543;
-		System.out.println(n);
-		String hex = "1F7";
+//		Scanner sc = new Scanner(System.in);
+//		int s = sc.nextInt();
+//		int n = s - 543;
+//		System.out.println(n);
+//		String hex = "1F7";
+//		Stack<Integer> stst = new Stack<Integer>();
+//		stst.push(1);
+//		stst.push(2);
+//		stst.push(3);
+//		stst.push(4);
+//		stst.push(5);
+//		System.out.println(stst.peek());
+//		System.out.println(stst.firstElement());
 //		int deci = 503;
 //		System.out.println(Integer.toHexString(deci));
 //		System.out.println(Integer.parseInt(hex, 16));
+		
+		LinkedList<Integer> arr = new LinkedList<>();
+		arr.add(5);
+		arr.add(4);
+		arr.add(3);
+		arr.add(2);
+		arr.add(1);
+		for (int i = 0; i < arr.size(); i++) {
+			System.out.print(arr.get(i) + " ");
+		}
+		System.out.println(arr.contains(4));
+		arr.remove(4);
+		for (int i = 0; i < arr.size(); i++) {
+			System.out.print(arr.get(i) + " ");
+		}
 //		
 //		System.out.println(hex.toUpperCase());
 //		
