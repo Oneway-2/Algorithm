@@ -25,7 +25,7 @@ public class Practice {
 //		System.out.println(Integer.parseInt(hex, 16));
 		
 		LinkedList<Integer> arr = new LinkedList<>();
-		arr.add(7);
+		arr.add(5);
 		arr.add(4);
 		arr.add(3);
 		arr.add(2);
