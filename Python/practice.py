@@ -40,22 +40,28 @@
 # print(new_list)
 
 
-def cs(s):
-    _c = ""
-    cnt = 0
-    result = ""
-    for c in s:
-        if c != _c:
-            _c = c
-            if cnt:
-                result += str(cnt)
-            result += c
-            cnt = 1
-        else:
-            cnt += 1
-    if cnt:
-        result += str(cnt)
-    return result
+# def cs(s):
+#     _c = ""
+#     cnt = 0
+#     result = ""
+#     for c in s:
+#         if c != _c:
+#             _c = c
+#             if cnt:
+#                 result += str(cnt)
+#             result += c
+#             cnt = 1
+#         else:
+#             cnt += 1
+#     if cnt:
+#         result += str(cnt)
+#     return result
 
 
-print(cs("aaabbcccccccca"))
+# print(cs("aaabbcccccccca"))
+
+nlist = [[0 for i in range(10)] for i in range(10)]
+plist = [a[:] for a in nlist]
+
+print(nlist)
+print(plist)
