@@ -1,5 +1,8 @@
 import sys
+# import copy
+# import time
 from collections import deque
+# start = time.time()
 input = sys.stdin.readline
 R, C = map(int, input().split())
 dr = [-1, 1, 0, 0]
@@ -13,6 +16,7 @@ for i in range(R):
 def bfs():
     queue = deque()
     tmap = [m[:] for m in mmap]
+    # tmap = copy.deepcopy(mmap)
     for i in range(R):
         for j in range(C):
             if tmap[i][j] == 2:
@@ -50,3 +54,4 @@ def backtrack(cnt):
 
 backtrack(0)
 print(answer)
+# print("time : ", time.time() - start)
