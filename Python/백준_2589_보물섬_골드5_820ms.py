@@ -2,22 +2,16 @@ import sys
 from collections import deque
 input = sys.stdin.readline
 R, C = map(int, input().split())
-mmap = [[] for i in range(R)]
 visited = [[False for i in range(C)] for i in range(R)]
 result = 0
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
-for i in range(R):
-    s = input().rstrip()
-    for j in s:
-        mmap[i].append(j)
+mmap = [list(input()) for i in range(R)]
 
 
 def bfs():
-    # print("\nbfs 시작")
     while queue:
         r, c, time = queue.popleft()
-        # print(r, c, time)
         global result
         result = max(time, result)
         for i in range(4):
