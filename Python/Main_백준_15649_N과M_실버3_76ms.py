@@ -1,5 +1,6 @@
 import sys
 import itertools
-a, b = map(int, sys.stdin.readline().strip().split())
+input = sys.stdin.readline
+a, b = map(int, input().split())
 arr = map(str, range(1, a+1))
-print('\n'.join(map(' '.join, itertools.permutations(arr, b))))
+print("\n".join(map(' '.join, itertools.permutations(arr, b))))
