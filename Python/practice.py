@@ -60,8 +60,15 @@
 
 # print(cs("aaabbcccccccca"))
 
-nlist = [[0 for i in range(10)] for i in range(10)]
-plist = [a[:] for a in nlist]
+# nlist = [[0 for i in range(10)] for i in range(10)]
+# plist = [a[:] for a in nlist]
 
-print(nlist)
-print(plist)
+# print(nlist)
+# print(plist)
+
+# nlist = ["a", "b", "c"]
+# print(nlist.index("b"))
+# print(nlist.index("c"))
+
+test = [[0] * 2 for i in range(5)]
+print(test)
