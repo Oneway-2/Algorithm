@@ -70,5 +70,5 @@
 # print(nlist.index("b"))
 # print(nlist.index("c"))
 
-test = [[0] * 2 for i in range(5)]
+test = [[0] * 3 for i in range(5)]
 print(test)
