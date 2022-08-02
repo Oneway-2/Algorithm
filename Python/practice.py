@@ -73,10 +73,18 @@
 # test = [[0] * 3 for i in range(5)]
 # print(test)
 
-q = dict()
-q[1] = 6
-q[2] = 7
-q[3] = 8
-print(q)
-print(1 in q)
-print(6 in q)
+# q = dict()
+# q[1] = 6
+# q[2] = 7
+# q[3] = 8
+# print(q)
+# print(1 in q)
+# print(6 in q)
+
+import heapq
+heap = []
+heapq.heappush(heap, 1)
+heap.append(2)
+heap.append(6)
+heapq.heappush(heap, 3)
+print(heap)
