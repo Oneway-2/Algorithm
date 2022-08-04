@@ -81,10 +81,25 @@
 # print(1 in q)
 # print(6 in q)
 
-import heapq
-heap = []
-heapq.heappush(heap, 1)
-heap.append(2)
-heap.append(6)
-heapq.heappush(heap, 3)
-print(heap)
+# import heapq
+# heap = []
+# heapq.heappush(heap, 1)
+# heap.append(2)
+# heap.append(6)
+# heapq.heappush(heap, 3)
+# print(heap)
+
+form = []
+# for i in "(2*((2)+(3*(3))))+(2*((3)))":
+# for i in "2*((2)+(3*((3)))+(2*((3)))":
+for i in "2*((2))+(3*((3))))+(2*((3)))":
+    form.append(i)
+print(form)
+formula = "".join(form)
+print(formula)
+# formula = "(2*((2)+(3*(3))))+(2*((3)))"
+print(eval(formula))
+form.clear()
+print(form)
+form.append(0)
+print(form)
