@@ -1,27 +1,29 @@
 import sys
 input = sys.stdin.readline
-group = [False] * 21
+total = 0
 N = int(input())
 for i in range(N):
-    command = input().rstrip()
-    if command == "all":
-        for j in range(21):
-            group[j] = True
+    text = input().rstrip()
+    if text == "all":
+        total = (1 << 20) - 1
         continue
-    elif command == "empty":
-        for j in range(21):
-            group[j] = False
+    elif text == "empty":
+        total = 0
         continue
-    com, idx = command.split()
+
+    com, idx = text.split()
     idx = int(idx)
-    if com == "add":
-        group[idx] = True
-    elif com == "remove":
-        group[idx] = False
-    elif com == "toggle":
-        group[idx] = not group[idx]
-    else:
-        if group[idx] == True:
+    check = (total & (1 << idx-1)) == (1 << idx-1)
+    if com == "check":
+        if check == True:
             print(1)
         else:
             print(0)
+    elif com == "add":
+        if check == False:
+            total = total ^ (1 << idx-1)
+    elif com == "remove":
+        if check == True:
+            total = total ^ (1 << idx-1)
+    elif com == "toggle":
+        total = total ^ (1 << idx-1)
