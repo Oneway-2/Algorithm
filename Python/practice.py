@@ -89,17 +89,41 @@
 # heapq.heappush(heap, 3)
 # print(heap)
 
-form = []
-# for i in "(2*((2)+(3*(3))))+(2*((3)))":
-# for i in "2*((2)+(3*((3)))+(2*((3)))":
-for i in "2*((2))+(3*((3))))+(2*((3)))":
-    form.append(i)
-print(form)
-formula = "".join(form)
-print(formula)
-# formula = "(2*((2)+(3*(3))))+(2*((3)))"
-print(eval(formula))
-form.clear()
-print(form)
-form.append(0)
-print(form)
+# form = []
+# # for i in "(2*((2)+(3*(3))))+(2*((3)))":
+# # for i in "2*((2)+(3*((3)))+(2*((3)))":
+# for i in "2*((2))+(3*((3))))+(2*((3)))":
+#     form.append(i)
+# print(form)
+# formula = "".join(form)
+# print(formula)
+# # formula = "(2*((2)+(3*(3))))+(2*((3)))"
+# print(eval(formula))
+# form.clear()
+# print(form)
+# form.append(0)
+# print(form)
+
+# group = False
+# print(group)
+# group = not group
+# print(group)
+# group = not group
+# print(group)
+
+# total = (1 << 4) - 1
+# newtotal = 0
+# obj = 1 << 1
+# # print(bin(total & obj))
+# # print(bin(total | obj))
+# target = 2
+# newobj = 1 << (target-1)
+# print(total & newobj == target)
+# print(newtotal & newobj == target)
+print(int(0b1000000000))
+# a = (1 << 20) - 1
+a = 0
+b = 1 << 10-1
+print(a, bin(a))
+print(b, bin(b))
+print(a & b)
