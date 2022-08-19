@@ -120,10 +120,34 @@
 # newobj = 1 << (target-1)
 # print(total & newobj == target)
 # print(newtotal & newobj == target)
-print(int(0b1000000000))
-# a = (1 << 20) - 1
-a = 0
-b = 1 << 10-1
-print(a, bin(a))
-print(b, bin(b))
-print(a & b)
+# print(int(0b1000000000))
+# # a = (1 << 20) - 1
+# a = 0
+# b = 1 << 10-1
+# print(a, bin(a))
+# print(b, bin(b))
+# print(a & b)
+
+# s = set()
+# s = set([i for i in range(1, 21)])
+# print(3 in s)
+# s.discard(3)
+# print(3 in s)
+
+# hi = (3, 5, [1, 2, 3, 4, 5])
+# print(hi)
+# print(hi[0])
+# print(hi[1])
+# print(hi[2])
+
+r = dict()
+r["hi"] = []
+r["hi"].append("bye")
+r["hi"].append("yo")
+r["hello"] = 0
+r["hello"] += 1
+r["hello"] += 1
+r["hello"] += 1
+print(r)
+
+print(r["hi"] in "bye")
