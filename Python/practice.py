@@ -140,14 +140,29 @@
 # print(hi[1])
 # print(hi[2])
 
-r = dict()
-r["hi"] = []
-r["hi"].append("bye")
-r["hi"].append("yo")
-r["hello"] = 0
-r["hello"] += 1
-r["hello"] += 1
-r["hello"] += 1
-print(r)
+# r = dict()
+# r["hi"] = []
+# r["hi"].append("bye")
+# r["hi"].append("yo")
+# r["hello"] = 0
+# r["hello"] += 1
+# r["hello"] += 1
+# r["hello"] += 1
+# print(r)
 
-print(r["hi"] in "bye")
+# print(r["hi"] in "bye")
+
+import collections
+temp = ["a", "b", "c", "d"]
+temp2 = ["a", "b", "c"]
+t = collections.Counter(temp)
+t2 = collections.Counter(temp2)
+print(t)
+print(t2)
+print(t - t2)
+
+thash = hash(10)
+thash = hash(20)
+print(hash("10"))
+print(hash("10"))
+print(hash("10"))
