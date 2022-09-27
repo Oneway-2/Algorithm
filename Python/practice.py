@@ -152,17 +152,36 @@
 
 # print(r["hi"] in "bye")
 
-import collections
-temp = ["a", "b", "c", "d"]
-temp2 = ["a", "b", "c"]
-t = collections.Counter(temp)
-t2 = collections.Counter(temp2)
-print(t)
-print(t2)
-print(t - t2)
+# import collections
+# temp = ["a", "b", "c", "d"]
+# temp2 = ["a", "b", "c"]
+# t = collections.Counter(temp)
+# t2 = collections.Counter(temp2)
+# print(t)
+# print(t2)
+# print(t - t2)
 
-thash = hash(10)
-thash = hash(20)
-print(hash("11"))
-print(hash("12"))
-print(hash("11"))
+# thash = hash(10)
+# thash = hash(20)
+# print(hash("11"))
+# print(hash("12"))
+# print(hash("11"))
+
+# _list = ["hiyo", "my name is hi", "in the ha"]
+# for sentence in _list:
+#     idx = 0
+#     while ' ' in sentence:
+#         sentence = sentence.replace(' ', '', 1)
+#         print(idx, sentence)
+#         idx += 1
+
+text = "HIYO"
+text2 = "hi.yo"
+nlist = ['a', 'b', 'c']
+print("HI" in text)
+print(text2.replace('.', *nlist))
+# for s in text:
+#     if s.isupper():
+#         print(s)
+#         s = s.lower()
+#         print(s)
