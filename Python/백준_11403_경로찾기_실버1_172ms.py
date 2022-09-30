@@ -12,18 +12,23 @@ for i in range(N):
         if s[j] == 1:
             mmap[i].append(j)
 
-for i in mmap:
-    for j in i:
-        print(j, end=" ")
-    print()
-
 queue = deque()
 for i in range(N):
-    visit = []
+    course = []
+    visited = [False for i in range(N)]
     queue.append(i)
     while queue:
         now = queue.popleft()
-        visit.append(now)
         for all in mmap[now]:
-            queue.append(all)
-    print("i = {} , visit = {}".format(i, visit))
+            if visited[all] == False:
+                queue.append(all)
+                visited[all] = True
+                course.append(all)
+    # print("i = {} , visit = {}".format(i, course))
+    for a in course:
+        answer[i][a] = 1
+
+for i in answer:
+    for j in i:
+        print(j, end=" ")
+    print()
