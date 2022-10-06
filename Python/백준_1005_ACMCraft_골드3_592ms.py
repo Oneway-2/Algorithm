@@ -1,12 +1,14 @@
 import sys
 from collections import defaultdict, deque
+input = sys.stdin.readline
 
 TC = int(input())
 for tc in range(TC):
     N, K = map(int, input().split(" "))
     indegree = [0 for i in range(N+1)]
     result = [0 for i in range(N+1)]
-    graph = defaultdict(list)
+    # graph = defaultdict(list)
+    graph = [[] for i in range(N+1)]
     time = [0]
     tmp = list(map(int, input().split(" ")))
     for i in tmp:
