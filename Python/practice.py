@@ -175,13 +175,21 @@
 #         print(idx, sentence)
 #         idx += 1
 
-text = "HIYO"
-text2 = "hi.yo"
-nlist = ['a', 'b', 'c']
-print("HI" in text)
-print(text2.replace('.', *nlist))
+from queue import PriorityQueue
+import heapq
+# text = "HIYO"
+# text2 = "hi.yo"
+# nlist = ['a', 'b', 'c']
+# print("HI" in text)
+# print(text2.replace('.', *nlist))
 # for s in text:
 #     if s.isupper():
 #         print(s)
 #         s = s.lower()
 #         print(s)
+
+que = PriorityQueue()
+que.put(3)
+que.put(1)
+que.put(5)
+print(que)
