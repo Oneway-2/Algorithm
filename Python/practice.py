@@ -175,8 +175,8 @@
 #         print(idx, sentence)
 #         idx += 1
 
-from queue import PriorityQueue
-import heapq
+# from queue import PriorityQueue
+# import heapq
 # text = "HIYO"
 # text2 = "hi.yo"
 # nlist = ['a', 'b', 'c']
@@ -188,8 +188,33 @@ import heapq
 #         s = s.lower()
 #         print(s)
 
-que = PriorityQueue()
-que.put(3)
-que.put(1)
-que.put(5)
-print(que)
+# que = PriorityQueue()
+# que.put(3)
+# que.put(1)
+# que.put(5)
+# print(que)
+
+# import heapq
+# heap = [1, 9, 2, 8, 3, 7, 4, 6, 5]
+# print(heap)
+# heapq.heapify(heap)
+# print(heap)
+# print(heap.index(9))
+# try:
+#     print(heap.index(100))
+# except:
+#     print("그딴건없어요")
+
+import re
+# txt = "How do you do?&"
+txt = '''
+hihi
+mush
+010-2424-1212
+010-1234-2345
+'''
+# r = re.compile("[owy][owy]")
+# r = re.compile("[dH].")
+r = re.compile("/D{3}-/D{4}-/D{4}")
+result = r.findall(txt)
+print(result)
