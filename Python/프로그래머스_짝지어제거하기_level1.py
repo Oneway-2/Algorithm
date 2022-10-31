@@ -1,30 +1,24 @@
 from collections import deque
 
+from collections import deque
+
 
 def solution(s):
-    nlist = deque(s)
-    length = len(nlist)
-    idx = 0
-    areTextsLeft = False
+    nlist = deque()
 
-    while length != 0:
-        if idx == length-1:  # 끝까지 도달했거나 length 가 0이됨.
-            areTextsLeft = True
-            break
+    for i in range(len(s)):
+        if len(nlist) == 0:
+            nlist.append(s[i])
+        elif s[i] == nlist[-1]:
+            nlist.pop()
+        else:
+            nlist.append(s[i])
 
-        if nlist[idx] == nlist[idx+1]:  # 짝지어진애 발견
-            del nlist[idx+1]
-            del nlist[idx]
-            length -= 2
-            idx = 0
-            continue
-
-        idx += 1
-
-    if areTextsLeft == True:
-        return 0
-    else:
+    if len(nlist) == 0:
         return 1
+    else:
+        return 0
 
 
-# 미완
+# 1. 인덱스를 0부터 다 찾는방식을 이용해봤는데 시간초과가 난다.
+# 2. deque를 사용하면 시간복잡도를 엄청나게 줄일 수 있따.
