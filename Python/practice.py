@@ -205,16 +205,32 @@
 # except:
 #     print("그딴건없어요")
 
-import re
-# txt = "How do you do?&"
-txt = '''
-hihi
-mush
-010-2424-1212
-010-1234-2345
-'''
-# r = re.compile("[owy][owy]")
-# r = re.compile("[dH].")
-r = re.compile("/D{3}-/D{4}-/D{4}")
-result = r.findall(txt)
-print(result)
+# import re
+# # txt = "How do you do?&"
+# txt = '''
+# hihi
+# mush
+# 010-2424-1212
+# 010-1234-2345
+# '''
+# # r = re.compile("[owy][owy]")
+# # r = re.compile("[dH].")
+# r = re.compile("/D{3}-/D{4}-/D{4}")
+# result = r.findall(txt)
+# print(result)
+
+n = 2
+T = 0
+for num in range(0, 0):  # a ~ b-1
+    T = T + num
+print(T)
+
+# n / T
+# 0 / 0 = 0 + 0
+# 0 / 0 = 0 + 1
+
+# dicts = {}
+# print(dicts)
+# dicts['A'] = 'abcd'
+# print(dicts)  # 'A' : 'abcd'
+# print(dicts['A'])
