@@ -10,8 +10,6 @@ for i in range(R):
 dr = [-1, 1, 0, 0]
 dc = [0, 0, -1, 1]
 
-fvisited = [[False for i in range(C)] for i in range(R)]
-jvisited = [[False for i in range(C)] for i in range(R)]
 fqueue = deque()
 jqueue = deque()
 
